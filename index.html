@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Strategic Islands — Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="header container">
+    <div class="title">Strategic Islands — Prototype</div>
+    <div class="menu-row">
+      <button id="btn-offline">آفلاین</button>
+      <button id="btn-online">آنلاین</button>
+      <button id="btn-choose-country">تغییر کشور</button>
+      <button id="btn-settings">تنظیمات</button>
+    </div>
+  </div>
+
+  <div id="menu" class="container">
+    <div id="account-area"></div>
+    <p class="small">این نسخه پیش‌نمایش است. برای اجرای آنلاین، سرور را اجرا کرده و آدرس آن را در client/config.json تنظیم کنید.</p>
+  </div>
+
+  <div id="game" class="hidden container">
+    <div id="hud">
+      <div id="left-hp">جان شما: <span id="hp-you">100</span></div>
+      <div id="timer">۱۵:۰۰</div>
+      <div id="right-hp">جان دشمن: <span id="hp-enemy">100</span></div>
+    </div>
+
+    <div id="play-area">
+      <div id="island-you" class="island"><div class="island-inner" id="island-inner-you"></div></div>
+      <div id="island-enemy" class="island"><div class="island-inner" id="island-inner-enemy"></div></div>
+    </div>
+
+    <div id="card-bar"></div>
+    <div id="log"></div>
+    <button id="btn-back">بازگشت</button>
+  </div>
+
+  <!-- Profile / Settings Modal -->
+  <div id="modal-settings" class="modal hidden">
+    <div class="modal-content">
+      <h3>پروفایل و تنظیمات</h3>
+      <div id="profile-area"></div>
+      <div class="profile-grid">
+        <div class="stat-card"><strong>آفلاین</strong><div id="offline-stats"></div></div>
+        <div class="stat-card"><strong>آنلاین</strong><div id="online-stats"></div></div>
+      </div>
+      <div style="margin-top:8px" class="settings-panel">
+        <div style="margin-bottom:8px">پلیر آیدی: <span id="display-player-id" class="player-id">---</span></div>
+        <div><input id="search-player-id" class="input" placeholder="جستجوی پلیر آیدی (۶ رقم)"/></div>
+        <div style="margin-top:8px"><button id="btn-search-player" class="search-btn">🔍 جستجو</button></div>
+        <div style="margin-top:12px"><strong>دوستان</strong><div id="friends-list" class="friend-list"></div></div>
+      </div>
+      <div style="margin-top:12px" class="modal-actions"><button id="settings-close">بستن</button></div>
+    </div>
+  </div>
+
+  <!-- Small Modal generic -->
+  <div id="modal" class="modal hidden"><div class="modal-content"><h3 id="modal-title"></h3><div id="modal-body"></div><div style="margin-top:10px" class="modal-actions"><button id="modal-ok">تأیید</button><button id="modal-cancel">لغو</button></div></div></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
+  <script src="pixi_game.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+*{box-sizing:border-box;font-family:Tahoma, Arial, sans-serif}
+:root{--accent:#2b6ef6;--bg:#08121a;--panel:rgba(255,255,255,0.04);--card:#0f1720}
+body{margin:0;padding:0;background:linear-gradient(180deg,#071425 0%, #0b1220 100%);color:#e6eef8;direction:rtl}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
+.title{font-size:20px;font-weight:700}
+.menu-row{display:flex;gap:12px;align-items:center}
+button{padding:8px 12px;border-radius:10px;border:none;background:var(--accent);color:white;cursor:pointer;box-shadow:0 4px 10px rgba(43,110,246,0.15)}
+.small{opacity:0.85;font-size:13px}
+.container{padding:12px}
+#game{padding:8px}
+#hud{display:flex;justify-content:space-between;align-items:center;padding:8px;background:var(--panel);border-radius:8px;margin-bottom:8px}
+#play-area{position:relative;height:400px;border-radius:12px;overflow:hidden;background:url('assets/water_texture.png');background-size:cover;display:flex;gap:10px;padding:10px}
+.island{flex:1;border-radius:12px;position:relative;display:flex;align-items:flex-start;justify-content:center}
+.island-inner{width:92%;height:92%;background:url('assets/island_texture.png');background-size:cover;border-radius:10px;position:relative;box-shadow:inset 0 -20px 60px rgba(0,0,0,0.4)}
+#card-bar{position:fixed;left:12px;right:12px;bottom:8px;background:rgba(0,0,0,0.6);padding:12px;display:flex;gap:12px;overflow:auto;border-radius:12px}
+.card{width:120px;background:linear-gradient(180deg,#ffffff,#e6e6e6);color:#000;padding:8px;border-radius:8px;cursor:grab;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.25)}
+.building{position:absolute;padding:6px 8px;background:rgba(0,0,0,0.6);color:#fff;border-radius:6px}
+#log{position:fixed;right:8px;top:90px;width:300px;max-height:300px;overflow:auto;background:rgba(0,0,0,0.45);padding:8px;border-radius:6px}
+.modal{position:fixed;left:0;right:0;top:0;bottom:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:9999}
+.modal-content{background:#071425;color:#e6eef8;padding:18px;border-radius:12px;width:420px;box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+.input{width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);margin-top:8px;background:#071425;color:#e6eef8}
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.stat-card{background:var(--card);padding:8px;border-radius:8px;text-align:center}
+.flag{width:36px;height:24px;border-radius:4px;object-fit:cover;vertical-align:middle}
+.player-id{display:inline-flex;gap:8px;align-items:center;padding:6px 8px;background:rgba(0,0,0,0.5);border-radius:8px}
+.search-btn{padding:6px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer;color:#e6eef8}
+.settings-panel{background:var(--panel);padding:12px;border-radius:8px}
+.friend-list{max-height:160px;overflow:auto;background:rgba(0,0,0,0.2);padding:8px;border-radius:8px}
+.profile-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
