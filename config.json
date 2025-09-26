@@ -1,3 +1,3 @@
 {
-  "api_base": "http://localhost:8000"
+  "api_base": "https://strategy-game-server.onrender.com/"
 }
